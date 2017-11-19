@@ -1,0 +1,12 @@
+mat-toolbar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+mat-toolbar-row {
+  justify-content: space-between;
+}
+/* This fills the remaining space, by using flexbox. Every toolbar row uses a flexbox row layout. */
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+

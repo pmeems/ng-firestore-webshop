@@ -1,0 +1,14 @@
+<mat-toolbar color="accent">
+  <img src="/assets/gummiapan.png" alt="Gummiapan stempels, markers en meer"
+       title="Gummiapan stempels, markers en meer"/>
+  <span>Gummiapan</span>
+  <ng-container *ngFor="let item of categories | async">
+    <button mat-button [routerLink]="item.link">{{item.name}}</button>
+  </ng-container>
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+  <button mat-button>Hoe werkt het?</button>
+  <button mat-button>Log-in</button>
+</mat-toolbar>
+
+

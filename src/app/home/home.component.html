@@ -1,0 +1,19 @@
+<div>
+  <mat-grid-list [cols]="numberColumns">
+    <mat-grid-tile
+      *ngFor="let item of products | async">
+      <mat-grid-tile-header color="accent">{{item.name}}</mat-grid-tile-header>
+      <img [src]="item.image"/>
+      <mat-grid-tile-footer>
+        <div mat-grid-list-text class="theme-list">
+          <div *ngFor="let theme of item.theme" color="secondary">{{theme}}</div>
+        </div>
+
+        {{item.price | currency:'EUR'}} <br/>
+        second line: button <br />
+
+      </mat-grid-tile-footer>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
